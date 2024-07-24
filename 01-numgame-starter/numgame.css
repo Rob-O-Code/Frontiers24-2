@@ -1,0 +1,7 @@
+/* SELECTOR PRIORITY
+   0. !important
+   1. #tag (single element)
+   2. .class (multiple elements of any type)
+   3. elementtype (all elements of one type)
+   4. * (all elements)
+ */
