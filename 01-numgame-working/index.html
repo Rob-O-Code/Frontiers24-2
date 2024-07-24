@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="./numgame.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
-<body> <!-- do something onload -->
+<body onload="restartGame()"> <!-- do something onload -->
     <h1>Number Guessing Game</h1>
     <p>Guess a number... more instructions coming later</p>
 
     <label>Guess: </label>
     <input id="numfield" type="number">
-    <button>MAKE GUESS</button>
+    <button onclick="makeGuess()">MAKE GUESS</button>
 
     <p id="feedback-text">(this is where the feedback goes)</p>
     <!-- the script MUST appear last-->
