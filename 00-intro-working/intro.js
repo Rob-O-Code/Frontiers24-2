@@ -7,6 +7,8 @@
 const body = document.body;
 const outlineCheckbox = document.getElementById("outline-checkbox");
 const hueNumfield = document.getElementById("hue-numfield");
+const textField = document.getElementById("text-field");
+const textOutput = document.getElementById("text-output");
 
 function buttonPressed() {
     body.style.backgroundColor = "rgb(0, 127, 255)";
@@ -23,4 +25,11 @@ function checkboxChanged() {
 
 function numfieldChanged() {
     let hue = parseInt(hueNumfield.value);
+    console.log(`the hue is ${hue}`)
+    body.style.backgroundColor = `hsl(${hue}, 100%, 85%)`;
+}
+
+function textFieldChanged() {
+    let name = textField.value;
+    textOutput.innerHTML = `Hello, ${name.toUpperCase()}!`;
 }
