@@ -1,0 +1,26 @@
+/* This is the CSS decorator */
+/* SELECTOR PRIORITY
+   0. !important
+   1. #tag (single element)
+   2. .class (multiple elements of any type)
+   3. elementtype (all elements of one type)
+   4. * (all elements)
+ */
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+  background-color: greenyellow;
+  outline: 5px solid black;
+}
+
+p {
+  margin: 0;
+  color: maroon;
+}
