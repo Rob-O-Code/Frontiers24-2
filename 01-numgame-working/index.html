@@ -9,13 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Number Game</title>
-    
+    <link rel="stylesheet" href="./numgame.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body> <!-- do something onload -->
     <h1>Number Guessing Game</h1>
+    <p>Guess a number... more instructions coming later</p>
 
-    <!-- more elements here! -->
+    <label>Guess: </label>
+    <input id="numfield" type="number">
+    <button>MAKE GUESS</button>
+
+    <p id="feedback-text">(this is where the feedback goes)</p>
     <!-- the script MUST appear last-->
+    <script src="./numgame.js"></script>
 </body>
 </html>
