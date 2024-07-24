@@ -20,8 +20,12 @@
     <input id="outline-checkbox" type="checkbox" onchange="checkboxChanged()">
     <label>Outline</label>
     <br>
-    <input id="hue-numfield" type="number" onchange="numfieldChanged()" min="0" max="359" value="180">
+    <input id="hue-numfield" type="number" onchange="numfieldChanged()" min="0" max="359" value="180" step="15">
     <label>Hue Value</label>
+    <br>
+    <label>Enter some text: </label>
+    <input id="text-field" onchange="textFieldChanged()">
+    <p id="text-output">(output goes here)</p>
 
     <script src="./intro.js"></script>
 </body>
