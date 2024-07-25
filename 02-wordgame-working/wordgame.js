@@ -23,13 +23,48 @@ function loadGame() {
             })]).finally(wordsLoaded);
 }
 
+let popularWordsSorted = {};
+
 function wordsLoaded() {
-    console.log(`Loaded ${popularWords.length} popular words and ${allWords.length} dictionary words!`)
+    console.log(`Loaded ${popularWords.length} popular words and ${allWords.length} dictionary words!`);
+    for (let i = 0; i < popularWords.length; i++) {
+        let word = popularWords[i];
+        let len = word.length;
+        if (popularWordsSorted[len] === undefined) {
+            popularWordsSorted[len] = [];
+        }
+        popularWordsSorted[len].push(word);
+    }
+    startGame();
 }
 
-// TODO: copy randInt
+let secret;
+let numLetters = 5;
+function startGame() {
+    // Get the array that contains words with numLetters
+    let popularWordsLength = popularWordsSorted[numLetters];
+
+    // Choose a random word from the array
+    let randomIndex = randInt(0, popularWordsLength.length);
+    secret = popularWordsLength[randomIndex];
+}
+
+function makeGuess() {
+
+}
+
 // TODO: write function isWord(word)
 
-// For checking word:  json.hasOwnProperty("programming")
-// For array of words: let arr = Object.keys(json)
-// For a random word:  let word = arr[randInt(0, arr.length - 1)];
+/**
+* Generate a random integer within min and max
+* @param {number} min 
+* @param {number} max 
+* @returns a random integer between min and max, inclusive
+*/
+function randInt(min, max) {
+    let rand = Math.random();
+    rand = rand * (max - min + 1);
+    rand = rand + min;
+    rand = Math.floor(rand);
+    return rand;
+}
