@@ -54,7 +54,7 @@ function startGame() {
 const guessWord = document.getElementById("guess-word");
 const guessHistory = document.getElementById("guess-history");
 function makeGuess() {
-    let guess = guessWord.value;
+    let guess = guessWord.value.toLowerCase();
     
     if (guess.length != numLetters) {
         return;
