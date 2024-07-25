@@ -47,10 +47,22 @@ function startGame() {
     // Choose a random word from the array
     let randomIndex = randInt(0, popularWordsLength.length);
     secret = popularWordsLength[randomIndex];
+
+    // TODO: reset other game elements (attempts, history, etc.)
 }
 
+const guessWord = document.getElementById("guess-word");
 function makeGuess() {
-
+    let guess = guessWord.value;
+    
+    if (guess.length != numLetters) {
+        return;
+    }
+    if (allWords.includes(guess) === false) {
+        guessWord.value = "";
+        return;
+    }
+    console.log(`Guess: "${guess}"`);
 }
 
 // TODO: write function isWord(word)
