@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Minimum: </label><input id="min-num" type="number" value="1">
+    <br>
+    <label>Maximum: </label><input id="max-num" type="number" value="100">
+    <br>
+    <button onclick="startGame()">Start Game</button>
+
+    <script>
+        function startGame() {
+            const minNum = document.getElementById("min-num");
+            const maxNum = document.getElementById("max-num");
+            window.location.replace(`./numgame.html?min=${minNum.value}&max=${maxNum.value}`)
+        }
+    </script>
+</body>
+</html>
