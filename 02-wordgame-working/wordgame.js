@@ -52,6 +52,7 @@ function startGame() {
 }
 
 const guessWord = document.getElementById("guess-word");
+const guessHistory = document.getElementById("guess-history");
 function makeGuess() {
     let guess = guessWord.value;
     
@@ -59,10 +60,21 @@ function makeGuess() {
         return;
     }
     if (allWords.includes(guess) === false) {
-        guessWord.value = "";
+        guessWord.value = ""; // Clear the box
         return;
     }
     console.log(`Guess: "${guess}"`);
+    // The guess is a real word with the right # of letters
+    for (let i = 0; i < numLetters; i++) {
+        let letter = guess[i].toUpperCase();
+        if (guess[i] === secret[i]) {
+            guessHistory.innerHTML += `<div class="letter correct">${letter}</div>`;
+        } else {
+            guessHistory.innerHTML += `<div class="letter">${letter}</div>`;
+        }
+    }
+    guessHistory.innerHTML += `<br>`;
+    guessWord.value = ""; // Clear the box
 }
 
 // TODO: write function isWord(word)

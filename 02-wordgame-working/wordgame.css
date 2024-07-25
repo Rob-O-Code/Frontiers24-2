@@ -1,0 +1,17 @@
+body {
+    background-color: lightsteelblue;
+}
+
+.letter {
+    display: inline-block;
+    border: 2px solid black;
+    height: 2em;
+    aspect-ratio: 1 / 1;
+    align-content: center;
+    text-align: center;
+    background-color: grey;
+}
+
+.letter.correct {
+    background-color: lightgreen;
+}

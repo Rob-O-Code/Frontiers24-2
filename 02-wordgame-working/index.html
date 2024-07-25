@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordgame</title>
+    <link rel="stylesheet" href="./wordgame.css">
 </head>
 <body onload="loadGame()">
     <h1>My Word Game</h1>
     <h3>definitely not a clone of NY Times Wordle</h3>
 
     <input id="guess-word" oninput="makeGuess()">
+    <p id="guess-history">HISTORY:<br></p>
 
     <script src="./wordgame.js"></script>
 </body>
