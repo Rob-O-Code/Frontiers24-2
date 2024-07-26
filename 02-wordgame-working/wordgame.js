@@ -6,7 +6,7 @@ function loadGame() {
         fetch('./popular.txt')
             .then(response => response.text())
             .then(text => {
-                popularWords = text.split("\r\n");
+                popularWords = text.replaceAll("\r", "").split("\n");
                 popularWords.pop(); // Remove the '' at the end
             })
             .catch(error => {
@@ -15,7 +15,7 @@ function loadGame() {
         fetch("./enable1.txt")
             .then(response => response.text())
             .then(text => {
-                allWords = text.split("\r\n");
+                allWords = text.replaceAll("\r", "").split("\n");
                 allWords.pop(); // Remove the '' at the end
             })
             .catch(error => {
