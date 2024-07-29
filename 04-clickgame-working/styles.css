@@ -19,7 +19,7 @@ h1, h2 {
     border: 5px solid white;
     display: flex;
     /* flex-direction: row; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 10px;
     overflow: auto;
     white-space: nowrap;
