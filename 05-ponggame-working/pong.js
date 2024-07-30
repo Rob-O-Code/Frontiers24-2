@@ -45,8 +45,13 @@ function nextTick() {
     intervalID = setTimeout(nextTick, 10);
 }
 
-function startup() {
+function ballReset(side) {
+    // Should ball go another direction?
     ball = new Ball(boardWidth/2, boardHeight/2, 1, -1, ballRadius, "hotpink");
+}
+
+function startup() {
+    ballReset(SIDE.NONE);
     paddleL = new Paddle(0, 0, paddleWidth, paddleLength, SIDE.LEFT, "red");
     paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleWidth, paddleLength, SIDE.RIGHT, "blue");
     draw();
@@ -56,14 +61,21 @@ function startup() {
 function playing() {
     paddleL.move(false, ball);
     paddleR.move(cpucheck.checked, ball);
-    ball.bounce([paddleL, paddleR]);
+    let sideScore = ball.bounce([paddleL, paddleR]);
+    if (sideScore != SIDE.NONE) {
+        if (sideScore == SIDE.LEFT) scoreL++;
+        if (sideScore == SIDE.RIGHT) scoreR++;
+        updateScore();
+        ballReset(sideScore);
+    }
     ball.move();
     draw();
+    if (scoreL > 2 || scoreR > 2) return STATE.GAMEOVER;
     return STATE.PLAYING;
 }
 
 function gameover() {
-
+    // What should happen here?
     return STATE.GAMEOVER;
 }
 
