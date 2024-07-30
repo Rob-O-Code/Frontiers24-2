@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Lights Plus Pattern</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .traffic-light {
+            width: 60px;
+            height: 180px;
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .light {
+            width: 40px;
+            height: 40px;
+            background-color: grey;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .light.off {
+            background-color: grey;
+        }
+
+        .empty {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="traffic-light empty"></div>
+        <div class="traffic-light">
+            <div id="tl-n-r" class="light red"></div>
+            <div id="tl-n-y" class="light yellow"></div>
+            <div id="tl-n-g" class="light green"></div>
+        </div>
+        <div class="traffic-light empty"></div>
+
+        <div class="traffic-light">
+            <div id="tl-w-r" class="light red"></div>
+            <div id="tl-w-y" class="light yellow"></div>
+            <div id="tl-w-g" class="light green"></div>
+        </div>
+
+        <div class="traffic-light empty"></div>
+
+        <div class="traffic-light">
+            <div id="tl-e-r" class="light red"></div>
+            <div id="tl-e-y" class="light yellow"></div>
+            <div id="tl-e-g" class="light green"></div>
+        </div>
+        <div class="traffic-light empty"></div>
+        <div class="traffic-light">
+            <div id="tl-s-r" class="light red"></div>
+            <div id="tl-s-y" class="light yellow"></div>
+            <div id="tl-s-g" class="light green"></div>
+        </div>
+        <div class="traffic-light empty"></div>
+    </div>
+    <script src="./traffic.js"></script>
+</body>
+</html>
