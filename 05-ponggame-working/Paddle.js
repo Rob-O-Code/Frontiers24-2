@@ -28,6 +28,8 @@ class Paddle {
             // don't set this.y! (cheating)
             this.vy = paddleVelocity; // <-- change this
         }
-        
+        this.y += this.vy;
+        if (this.y < 0) this.y = 0;
+        if (this.y + this.h > boardHeight) this.y = boardHeight - this.h;
     }
 }

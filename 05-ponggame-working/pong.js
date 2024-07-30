@@ -54,6 +54,8 @@ function startup() {
 }
 
 function playing() {
+    paddleL.move(false, ball);
+    paddleR.move(cpucheck.checked, ball);
     ball.move();
     draw();
     return STATE.PLAYING;
