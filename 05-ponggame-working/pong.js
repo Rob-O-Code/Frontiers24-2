@@ -21,10 +21,11 @@ let state = STATE.STARTUP;
 
 function resetGame() {
     state = STATE.STARTUP;
-
+    clearInterval(intervalID);
     nextTick();
 }
 
+let intervalID;
 function nextTick() {
     switch (state) {
         case STATE.STARTUP:
@@ -40,14 +41,17 @@ function nextTick() {
             state = STATE.STARTUP;
             break;
     }
+    intervalID = setTimeout(nextTick, 10);
 }
 
 function startup() {
     ball = new Ball(boardWidth/2, boardHeight/2, 1, -1, ballRadius, "hotpink");
+    draw();
     return STATE.PLAYING;
 }
 
 function playing() {
+    ball.move();
     draw();
     return STATE.PLAYING;
 }

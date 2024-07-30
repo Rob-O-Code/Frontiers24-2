@@ -19,6 +19,11 @@ class Ball {
         ctx.stroke();
     }
 
+    move() {
+        this.x += this.vx;
+        this.y += this.vy;
+    }
+
     /**
      * Causes the ball to bounce off of objects on the screen
      * @param {*} things a collection of bounceable things 
