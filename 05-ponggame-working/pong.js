@@ -2,6 +2,7 @@ const gameboard = document.getElementById("gameboard");
 const cpucheck = document.getElementById("cpucheck");
 const ctx = gameboard.getContext("2d");
 const STATE = {STARTUP: 0, PLAYING: 1, GAMEOVER: 2};
+const SIDE = {NONE: 0, LEFT: 1, RIGHT: 2};
 
 let boardWidth = 500;
 let boardHeight = 500;
@@ -46,6 +47,8 @@ function nextTick() {
 
 function startup() {
     ball = new Ball(boardWidth/2, boardHeight/2, 1, -1, ballRadius, "hotpink");
+    paddleL = new Paddle(0, 0, paddleWidth, paddleLength, SIDE.LEFT, "red");
+    paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleWidth, paddleLength, SIDE.RIGHT, "blue");
     draw();
     return STATE.PLAYING;
 }
@@ -64,7 +67,10 @@ function gameover() {
 function draw() {
     ctx.fillStyle = "grey";
     ctx.fillRect(0, 0, boardWidth, boardHeight);
+    
     ball.draw(ctx);
+    paddleL.draw(ctx);
+    paddleR.draw(ctx);
 }
 
 function updateScore() {
