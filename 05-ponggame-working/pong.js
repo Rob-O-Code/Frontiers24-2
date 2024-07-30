@@ -56,6 +56,7 @@ function startup() {
 function playing() {
     paddleL.move(false, ball);
     paddleR.move(cpucheck.checked, ball);
+    ball.bounce([paddleL, paddleR]);
     ball.move();
     draw();
     return STATE.PLAYING;
