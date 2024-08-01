@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robbie &amp; Prof Loi</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div id="dev-controls">
+        <div class="controls">
+            <button onclick="getLocation()">LOAD LOCATION</button>
+            <button onclick="getWeather()">LOAD WEATHER</button>
+            <button onclick="getForecast()">LOAD FORECAST</button>
+            <button onclick="getPollution()">LOAD POLLUTION</button>
+        </div>
+        <div class="controls">
+            <input id="testnum" type="number" min="1" max="5" value="1">
+            <button onclick="testLocation()">TEST LOCATION</button>
+            <button onclick="testWeather()">TEST WEATHER</button>
+            <button onclick="testForecast()">TEST FORECAST</button>
+            <button onclick="testPollution()">TEST POLLUTION</button>
+        </div>
+    </div>
+
+    <p style="display: inline;">See examples.js to get started</p> <button style="display: inline;" onclick="load1()">LOAD FROM example.js</button>
+    
+    <h2 id="location">LOCATION</h2>
+    <p id="weather-report">WEATHER REPORT</p>
+    
+    <table id="forecast-table"></table>
+
+    <p id="pollution-report">POLLUTION REPORT</p>
+    
+    <script src="./OWMGeocode.js"></script>
+    <script src="./OWMForecast.js"></script>
+    <script src="./OWMWeather.js"></script>
+    <script src="./OWMPollution.js"></script>
+    
+    <script src="./display.js"></script>
+    <script src="./trigger.js"></script>
+
+    <script src="./example.js"></script>
+</body>
+</html>

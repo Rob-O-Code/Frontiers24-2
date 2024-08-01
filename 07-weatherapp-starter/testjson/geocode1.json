@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Worcester",
+        "local_names": {
+            "en": "Worcester",
+            "ru": "Вустер",
+            "uk": "Вустер"
+        },
+        "lat": 42.2625621,
+        "lon": -71.8018877,
+        "country": "US",
+        "state": "Massachusetts"
+    }
+]

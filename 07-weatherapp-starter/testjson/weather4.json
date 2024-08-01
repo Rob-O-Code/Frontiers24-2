@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -118.0051,
+        "lat": 33.8567
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 82.11,
+        "feels_like": 83.19,
+        "temp_min": 70.43,
+        "temp_max": 95.81,
+        "pressure": 1013,
+        "humidity": 52
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 10.36,
+        "deg": 310
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1691025358,
+    "sys": {
+        "type": 2,
+        "id": 2039893,
+        "country": "US",
+        "sunrise": 1690981458,
+        "sunset": 1691031130
+    },
+    "timezone": -25200,
+    "id": 5331575,
+    "name": "Buena Park",
+    "cod": 200
+}

@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -116.8563,
+        "lat": 36.6528
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 97.52,
+        "feels_like": 92.21,
+        "temp_min": 97.52,
+        "temp_max": 97.52,
+        "pressure": 1006,
+        "humidity": 6,
+        "sea_level": 1006,
+        "grnd_level": 904
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 13.02,
+        "deg": 185,
+        "gust": 12.26
+    },
+    "clouds": {
+        "all": 13
+    },
+    "dt": 1691025784,
+    "sys": {
+        "country": "US",
+        "sunrise": 1690980840,
+        "sunset": 1691031196
+    },
+    "timezone": -25200,
+    "id": 5504763,
+    "name": "Gold Center",
+    "cod": 200
+}

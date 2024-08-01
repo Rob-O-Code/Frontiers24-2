@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 13.3889,
+        "lat": 52.517
+    },
+    "weather": [
+        {
+            "id": 520,
+            "main": "Rain",
+            "description": "light intensity shower rain",
+            "icon": "09n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 62.71,
+        "feels_like": 62.87,
+        "temp_min": 61,
+        "temp_max": 65.37,
+        "pressure": 981,
+        "humidity": 89
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 12.66,
+        "deg": 220
+    },
+    "rain": {
+        "1h": 0.51
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1691025285,
+    "sys": {
+        "type": 2,
+        "id": 2009543,
+        "country": "DE",
+        "sunrise": 1691033315,
+        "sunset": 1691088999
+    },
+    "timezone": 7200,
+    "id": 7576815,
+    "name": "Alt-Kölln",
+    "cod": 200
+}

@@ -1,0 +1,31 @@
+body {
+    background-color: #1f001f;
+}
+
+h2, p {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#dev-controls {
+    width: auto;
+    border-color: white;
+    border-style: solid;
+    background-color: rgba(127, 127, 127, 0.5);
+}
+
+.controls {
+    display: flex;
+    padding: 5px;
+}
+
+#forecast-table {
+    color: white;
+    border-collapse: collapse;
+}
+
+#forecast-table tr td, #forecast-table tr th {
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+}
