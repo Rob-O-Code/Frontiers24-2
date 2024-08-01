@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+#scoreboard {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#reset {
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
